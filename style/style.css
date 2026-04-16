@@ -1,0 +1,156 @@
+html, body {
+  box-sizing: border-box;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #032013;
+  height: 100%;
+  width: 100%;
+}
+/* Alles voor watermerk*/
+.watermerk {
+    position: relative;
+    z-index:0;
+}
+.watermerk::before {
+    content: ""; /*toon geen text, maar er is wel een element*/
+    position: fixed; /*Element blijft op dezelfde positie staan*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/logo_achtergrond.jpg") center/cover no-repeat;
+    opacity: 0.05; /* transparantie */
+    z-index: -1; /* achter alle content */
+    pointer-events: none; /* muisinteracties blijven werken */
+}
+/*hyperlinks een andere kleur geven*/
+a, a:hover {
+  text-decoration: none;
+  color: #31AD76;
+}
+/*Items in de lijst opmaken*/
+.list{
+  font-weight: bold;
+  font-size:large;
+  list-style: none;
+}
+/*algemene opmaak afbeeldingen*/
+.afbeelding{
+    width: 280px !important; /*Zorgt ervoor dat die breedte als prioriteit gebruikt wordt boven de algememen bootstrap CSS*/
+    height: auto;
+    align-self: center;
+}
+
+/*alles voor een tekstvak te laten verschijnen als je op afbeelingslinks zweeft*/
+.img-hover {
+    position: relative;
+    display: inline-block;
+}
+.img-hover img { /*als je over de afbeelding zweeft, verschijnt er een blok*/
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.caption { /*tekst wordt als 'caption' getoond.*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #31AD76;
+    color: #032013;
+    padding: 8px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+.img-hover:hover .caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+/*hoofdtitels op detailpagina's*/
+.detailtitel{
+  color:#B97A57;
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 50px;
+  text-transform: uppercase;
+}
+/*opmaak 1ste hoofdtitel*/
+.h1{
+  font-size:xx-large;
+  font-weight: bold;
+  color: #B97A57;
+  margin-top: 2%;
+  margin-bottom: 2%;  
+}
+/*opmaak 2de hoofdtitel*/
+.h2{
+  font-size:x-large;
+  font-weight: bold;
+  color: #B97A57;
+    margin-top: 2%;
+  margin-bottom: 2%;  
+}
+/*opmaak 3de hoofdtitel*/
+.h4{
+  font-size:large;
+  font-weight: bold;
+  color: #032013;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+/*Kleurenpallet. Gewoon om bij de hand te hebben voor individuele aanpassingen*/
+.donkerbruin {
+  color: #B97A57;
+}
+.bruin{
+  color: #D18A62
+}
+.groen{
+  color: #31AD76
+}
+.oranje{
+  color: #FF7F27
+}
+/*Om invulvelden volledige breedte van hun vak te laten innemen*/
+.langveld {
+  width: 100%;
+}
+/*om * een rode opvallende kleur te geven*/
+.span {
+  color: rgb(255, 0, 0);
+}
+/*alles voor de side navigatie links op de webpagina's weer te geven. Vooral voor links naar contact en overzicht*/
+.sidenav {
+  width: 160px; /* breedte van sidebar vastzetten */
+  position: fixed; /* Blijft op zelfde positie staan bij scrollen */
+  z-index: 1; /*  */
+  top: 0; /* Blijf aan de top hangen*/
+  left: 0; /*Blijf links staan*/
+  height: 100vh; /*zorg dat de navigatiebalk volledige hoogte van webpagina inneemt. Schaalt beter*/
+  display:flex; /*is belangrijk om afbeeldingen boven en onder te laten verschijnen. Laat het "flexibel" tonen.*/
+  flex-direction: column; /*zorg ervoor dat alle items in een kolom staan (alles onder elkaar*/
+  justify-content: space-between; /*zorgt dat er ruimte tussen bovenkant en onderkant is*/
+  overflow-x: visible; /* Zorgt ervoor dat je niet horizontaal verplaatst bij groter slepen venster*/
+  overflow-y: auto;
+  padding-top: 20px; /*afstand tot bovenkant pagina*/
+}
+.main {
+  margin-left: 160px; /*Zorgt voor een marge links in het mail gedeelte van de html pagina, zodat hoofdpagina mooi rechts ernaast uitlijnt*/
+  padding: 0px 10px;
+}
+/* Bedoelt om marges aan te passen aan smarthpone schermen*/
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*bannerfoto's*/
+.banner{
+    width: auto;
+    height: 100%;
+}
