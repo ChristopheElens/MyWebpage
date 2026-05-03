@@ -1,0 +1,166 @@
+/*Opmaak algemeen en body*/
+html, body {
+  box-sizing: border-box;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #032013;
+  height: 100%;
+  width: 100%;
+  padding-top: 80px; /* hoogte van de navbar */
+}
+/* Alles voor watermerk*/
+.watermerk { /*Positie van de watermerk zelf*/
+    position: relative;
+    z-index:0;
+}
+.watermerk::before { /*Eigenschappen van de watermerk*/
+    content: ""; /*toon geen text, maar er is wel een element*/
+    position: fixed; /*Element blijft op dezelfde positie staan*/
+    top: 0; /*positie bovenaan*/
+    left: 0;
+    width: 100%; /*breedte over de pagina*/
+    height: 100%;
+    background: url("../images/logo_achtergrond.jpg") center/cover no-repeat; /*Geen herhalingen van het watermerk*/
+    opacity: 0.05; /* transparantie */
+    z-index: -1; /* achter alle content */
+    pointer-events: none; /* muisinteracties blijven werken */
+}
+/*hyperlinks een andere kleur geven*/
+a, a:hover {
+  text-decoration: none;
+  color: #31AD76;
+}
+
+/*algemene opmaak afbeeldingen*/
+.afbeelding{
+    width: 280px !important; /*Zorgt ervoor dat die breedte als prioriteit gebruikt wordt boven de algememen bootstrap CSS*/
+    height: auto;
+    align-self: center;
+}
+
+/*alles voor een tekstvak te laten verschijnen als je op afbeelingslinks zweeft*/
+.img-hover { /*Als je er effectief overzweeft*/
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.img-hover img { /*afbeelding*/
+    display: block;
+    height: auto;
+    max-width: 100%; /* responsief, maar niet geforceerd */
+}
+.caption { /*tekst wordt als 'caption' getoond.*/
+    position: absolute;
+    bottom: -5px;
+    left: 50%; /*tekst in de caption mooi centreren*/
+    width: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    background: #31AD76;
+    color: #032013;
+    padding: 3px 8px;
+    text-align: center;
+    font-size: clamp(0.6rem, 1vw, 1rem); /*Blijkbaar betere methode om tekstgrootte aan te passen aan schermen?*/
+    border-radius: 5px;
+    opacity: 0; /*Vooralleer je over de afbeelding zweeft, is de caption onzichtbaar*/
+    transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+    white-space: nowrap; /*Voorkomen dat woorden 'gewrapt' worden*/
+}
+.img-hover:hover .caption { /*Als je boven de afbeelding zweeft, moet de caption zichtbaar worden*/
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Alles voor de navigatiebar */
+.nav-img img { /*apparte groottes en opmaak zodat die verschilt van andere links afbeeldingen*/
+    height: 100px;
+    width: auto !important;
+}
+.navbar { /*transparante navbar zodat watermerk zichtbaar blijft*/
+  background-color: transparent !important;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+/*hoofdtitels op detailpagina's*/
+.detailtitel{
+  color:#B97A57;
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 5%;
+  text-transform: uppercase;
+}
+/*opmaak 1ste hoofdtitel*/
+.h1{
+  font-size:xx-large;
+  font-weight: bold;
+  color: #B97A57;
+  margin-top: 5%;
+  margin-bottom: 5%;  
+}
+/*opmaak 2de hoofdtitel*/
+.h2{
+  font-size:x-large;
+  font-weight: bold;
+  color: #B97A57;
+  margin-top: 2%;
+  margin-bottom: 2%;  
+}
+/*opmaak 3de hoofdtitel*/
+.h4{
+  font-size:large;
+  font-weight: bold;
+  color: #032013;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+}
+/*Kleurenpallet. Gewoon om bij de hand te hebben voor individuele aanpassingen*/
+.donkerbruin {
+  color: #B97A57;
+}
+.bruin{
+  color: #D18A62
+}
+.groen{
+  color: #31AD76
+}
+.oranje{
+  color: #FF7F27
+}
+/*Om invulvelden volledige breedte van hun vak te laten innemen*/
+.langveld {
+  width: 100%;
+}
+/*om * een rode opvallende kleur te geven*/
+.span {
+  color: rgb(255, 0, 0);
+}
+/*Opmaak van de hoofdpagina*/
+.main {
+  margin-left: 10px; /*Zorgt voor een marge links in het mail gedeelte van de html pagina, zodat hoofdpagina mooi rechts ernaast uitlijnt*/
+  padding: 0px 5px;
+}
+
+/*Items in de lijst opmaken zorgt ervoor dat er geen opsommingstekens getoond worden in contactformulier*/
+.list{
+  font-weight: bold;
+  font-size:large;
+  list-style: none;
+}
+/*Copyright opmaak teken bij afbeeldingen*/
+.copyright {
+    text-align:start ;
+    font-size: 0.7rem;
+    color: #032013;
+    margin-top: 4px;
+    opacity: 0.7;
+}
+/*Leaflet map op indexpagina*/
+#apMap {
+  height: 300px;
+  width: 100%;
+}

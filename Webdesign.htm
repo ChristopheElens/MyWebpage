@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webdesign</title>
+  <!-- resetten van browsers -->
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Bootstrap CSS icons: https://icons.getbootstrap.com/#usage -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- JavaScript: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer>
+    </script>
+  <!-- eigen geschreven css voor jouw html-bestand -->
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body class="watermerk">
+<main class="main">
+
+<!--navigatie menu bovenaan-->
+<nav class="navbar fixed-top" style="height: 80px;">
+  <div class="container-fluid d-flex justify-content-between align-items-center px-0">
+    <a href="portfolio.htm" class="me-3">
+      <figure class="img-hover nav-img">
+        <img src="images/navigatielogo.jpg" alt="overzicht" title="Overzicht">
+        <div class="caption">Overzicht</div>
+      </figure>
+    </a>
+    <a href="contact.htm">
+      <figure class="img-hover nav-img">
+        <img src="images/logo_contact.png" alt="Contact" title="Contact">
+        <div class="caption">Contact</div>
+      </figure>
+    </a>
+  </div>
+</nav>
+
+<!--Hoofdtitel pagina -->
+<h1 class="detailtitel"> Webdesign </h1>
+<h4 class="h4">Tijdens de lessen Webtechnologie leren wij om een website te schrijven: met behulp van Bootstrap, CSS en HTML-code, bouwen wij stapsgewijs onze website op. Deze website is onderdeel van onze cursus.</h4>
+
+<!--Introductie onderwerp -->
+<h2 class="h2">De kunst van Webdesign</h2>
+<p>Het opbouwen van een website is een langdurend project in verschillende fasen. Van het maken van de eerste schets, tot het uiteindelijk publiceren op het internet is een lang proces die uit verschillende fasen bestaat.</br>
+Vooral het permanente controleren en evalueren tijdens elke stap, maakt dat er veel tijd opgaat tussen idee en werkelijkheid. Hieronder schets ik even kort enkele van deze stappen die gemaakt worden tijdens het opbouwen van een website.</p>
+<article class=" row" >
+  <div class="col-12 col-sm-6 d-flex flex-column justify-content-center">
+    <h2 class="h2"> Wireframes</h2>
+    <p>Een Wireframe is een soort 'schets' van hoe je een website zou willen opbouwen. Een soort 'getekende' versie van hoe jij jouw website wilt laten uitzien. Het is altijd belangrijk om een eindresultaat voor ogen te houden. Zeker bij een tijdsintensieve opdracht.</p>
+    <p>Hier zie je een eerste schets van hoe ik de website wilde opbouwen. Doorheen het proces, veranderd de layout o.i.v. nieuwe ideeën en inzichten. De eerste schets lijkt dan ook helemaal niet meer op het resultaat dat je nu aan het lezen bent.</p>
+  </div>  
+  <div class="col-12 col-sm-6 d-flex flex-column justify-content-center">
+    <figure>
+    <img src="images/Wireframe1.png" class="img-fluid" alt="Wireframe" title="Wireframe">
+    </figure>
+</article>
+
+<!--Telkens rij met 2 kolommen: Alternerend tekst en afbeeldingen -->
+<article class=" row" >
+  <div class="col-12 col-sm-6 d-flex flex-column justify-content-center">
+    <figure>
+    <img src="images/HTML_code.png" class="img-fluid" alt="HTML" title="HTML">
+    </figure>
+  </div>  
+  <div class="col-12 col-sm-6 d-flex flex-column justify-content-center">
+    <h2 class="h2"> HTML</h2>
+    <p> <abbr title="Hyper Text Markup Language">HTML</abbr> is de programeertaal waarmee websites geschreven worden. De code is zodanig eenvoudig dat die zelfs kan geschreven worden in simpele tekst-editors zoals Kladblok. Voor deze website gebuiken we Microsoft's Visual Studio &copy; : een programmeeromgeving die handig gebruikt kan worden om in meerdere programmeertalen te schrijven, zoals ook Python &copy;</p>
+    <p>Zoals je op de afbeelding kunt zien, bestaat zo'n code uit verschillende elementen, die elk een kort omschrijven hoe de webbrowser elk element moet interpreteren en correct weergeven. Eventuele eigenschappen van elk element wordt omschreven in een 'class'. De opmaakregels hiervoor worden geschreven in nog een ander document: een <abbr title="Cascading Style Sheets">CSS-bestand</abbr>.</p>
+  </div>
+</article>
+
+<article class=" row" >
+  <div class="col-12 col-sm-6 d-flex flex-column justify-content-center">
+    <h2 class="h2"> Online</h2>
+    <p>Als de website uiteindelijk afgewerkt raakt, moet deze natuurlijk nog online gezet worden. Hiervoor zijn er verschillende platformen waar je dit op kan doen.</p>
+    <p>Deze website wordt momenteel gehost op <a href="https://www.netlify.com/">Netlify &copy;</a>. Een <abbr title="Platform As A Service">PAAS</abbr> online omgeving die de mogelijkheid biedt om website te hosten en zichtbaar te maken voor iedereen.</p>
+  </div>  
+  <div class="col-12 col-sm-6 d-flex flex-column justify-content-center">
+    <figure>
+    <img src="images/Netlify.png" class="img-fluid" alt="Powerline" title="Powerline">
+    </figure>
+</article>
+
+</main>
+
+<footer class="container-fluid bg-light text-center donkerbruin h6 small p-4">
+    SYSTEEM- EN NETWERKBEHEERDER: Christophe Elens <br>Bron afbeeldingen: Pexels &copy; en Copilot &copy;
+</footer>
+</body>
+</html>
