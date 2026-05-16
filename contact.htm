@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>contact</title>
+    <!-- Auteur -->
+  <meta name="author" content="Christophe Elens">
   <!-- resetten van browsers -->
   <link rel="stylesheet" href="css/reset.css">
   <!-- Bootstrap CSS -->
@@ -18,6 +20,8 @@
     </script>
   <!-- eigen geschreven css voor jouw html-bestand -->
   <link rel="stylesheet" href="style/style.css">
+<!-- Javascript bestanden -->
+    <script src="js/script.js" defer></script>
 </head>
 
 <body> 
@@ -73,23 +77,26 @@
         </ul>
 
 <!--contactformulier-->                
-  <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true"> <!-- POST voor veiliger doorzenden gegevens-->
+  <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" class="needs-validation" novalidate> <!-- POST voor veiliger doorzenden gegevens-->
     <fieldset>
       <legend class="h4">Contacteren</legend>
         <article class="row">
           <div class="col-md-6">
               <label for="fname">Voornaam:<span class="span">*</span></label><br>
-              <input placeholder="Voornaam" type="text" class="langveld" id="fname" name="fname"><br>
-          </div>
+              <input placeholder="Voornaam" type="text" class="langveld form-control" id="fname" name="fname" required><br>
+              <div class="invalid-feedback">Gelieve jouw voornaam in te vullen.</div>          
+            </div>
           <div class="col-md-6">
               <label for="lname">Achternaam:<span class="span">*</span></label><br>
-              <input placeholder="Achternaam" type="text" class="langveld" id="lname" name="lname"><br>
+              <input placeholder="Achternaam" type="text" class="langveld form-control" id="lname" name="lname" required><br>
+              <div class="invalid-feedback">Gelieve jouw achternaam in te vullen.</div> 
           </div>
         </article>
         <article class="row">
           <div class="col">
               <label for="email">e-mail:<span class="span">*</span></label><br>
-              <input placeholder="iemand@ergens.be" type="email" class="langveld" id="email" name="email"><br>
+              <input placeholder="iemand@ergens.be" type="email" class="langveld form-control" id="email" name="email"><br>
+              <div class="invalid-feedback">Gelieve jouw achternaam in te vullen.</div> 
           </div>
         </article>
         <article class="row">
@@ -117,7 +124,7 @@
 
 </main>
 <footer class="container-fluid bg-light text-center donkerbruin h6 small p-4">
-    SYSTEEM- EN NETWERKBEHEERDER: Christophe Elens <br>Bron afbeeldingen: Pexels &copy; en Copilot &copy;
+    SYSTEEM- EN NETWERKBEHEERDER: Christophe Elens &copy;<br>Bron afbeeldingen: Pexels &copy; en Copilot &copy;
 </footer>
 </body>
 
